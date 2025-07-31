@@ -1,6 +1,7 @@
 package com.example.demo.sec01.controller;
 
 import com.example.demo.sec01.vo.Producto;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
@@ -15,6 +16,7 @@ import reactor.core.publisher.Flux;
 @RequiredArgsConstructor
 @Slf4j
 public class ProductoRestController {
+    @Getter
     private final WebClient webClient = WebClient
             .builder()
             .baseUrl("http://localhost:7070")
